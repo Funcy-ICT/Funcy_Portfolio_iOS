@@ -1,0 +1,27 @@
+# SwiftLintFramework Docs: https://realm.github.io/SwiftLint/index.html
+
+# デフォルト有効のルールのうち、無効にするもの
+disabled_rules:
+- trailing_whitespace
+- line_length
+
+# force cast, force try は暫定的にwarningへ
+force_cast: warning
+force_try: warning
+
+# 追加したOSSライブラリは対象に含めない
+excluded:
+- Pods/
+
+# 変数名に関する制約
+# excludedは例外
+identifier_name:
+  allowed_symbols: "_"
+  min_length: 2
+  excluded:
+    - i
+    - j
+    - n
+    - x
+    - y
+
