@@ -179,6 +179,7 @@
 				44D3E5A027141D9800CDFB26 /* Frameworks */,
 				44D3E5A127141D9800CDFB26 /* Resources */,
 				6A7E776995848D28314F7EF6 /* [CP] Embed Pods Frameworks */,
+				44D3E5D6271428DA00CDFB26 /* Run SwiftLint Script */,
 			);
 			buildRules = (
 			);
@@ -315,6 +316,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-portfolio-ios-portfolio-iosUITests/Pods-portfolio-ios-portfolio-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		44D3E5D6271428DA00CDFB26 /* Run SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		4DB23CFC565E2A38C80578CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
