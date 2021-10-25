@@ -17,6 +17,8 @@
 		4420239427268F4200C1349A /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4420239327268F4200C1349A /* Setting.storyboard */; };
 		4420239627268F5D00C1349A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4420239527268F5D00C1349A /* SettingViewController.swift */; };
 		44202398272691C100C1349A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44202397272691C000C1349A /* MainTabBarController.swift */; };
+		442023A12726A51E00C1349A /* PersonalSubmitWork.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442023A02726A51E00C1349A /* PersonalSubmitWork.storyboard */; };
+		442023A32726A55300C1349A /* PersonalSubmitWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */; };
 		44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3E5A627141D9800CDFB26 /* AppDelegate.swift */; };
 		44D3E5A927141D9800CDFB26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3E5A827141D9800CDFB26 /* SceneDelegate.swift */; };
 		44D3E5B027141D9900CDFB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D3E5AF27141D9900CDFB26 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		4420239327268F4200C1349A /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		4420239527268F5D00C1349A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		44202397272691C000C1349A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		442023A02726A51E00C1349A /* PersonalSubmitWork.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalSubmitWork.storyboard; sourceTree = "<group>"; };
+		442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSubmitWorkViewController.swift; sourceTree = "<group>"; };
 		44D3E5A327141D9800CDFB26 /* portfolio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D3E5A627141D9800CDFB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D3E5A827141D9800CDFB26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				4420239B27269B0F00C1349A /* PersonalMyPage */,
 				4420239C27269B5300C1349A /* GroupMyPage */,
 				4420239D27269B6F00C1349A /* Setting */,
+				4420239F2726A4EC00C1349A /* PersonalSubmitWork */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +167,15 @@
 				4420239527268F5D00C1349A /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		4420239F2726A4EC00C1349A /* PersonalSubmitWork */ = {
+			isa = PBXGroup;
+			children = (
+				442023A02726A51E00C1349A /* PersonalSubmitWork.storyboard */,
+				442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */,
+			);
+			path = PersonalSubmitWork;
 			sourceTree = "<group>";
 		};
 		44D3E59A27141D9800CDFB26 = {
@@ -348,6 +362,7 @@
 				442023882726877D00C1349A /* TopView.storyboard in Resources */,
 				4420238C27268E4100C1349A /* PersonalMyPage.storyboard in Resources */,
 				4420239427268F4200C1349A /* Setting.storyboard in Resources */,
+				442023A12726A51E00C1349A /* PersonalSubmitWork.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +511,7 @@
 				4420238A272687E600C1349A /* TopViewController.swift in Sources */,
 				4420239227268F0200C1349A /* GroupMyPageViewController.swift in Sources */,
 				44202398272691C100C1349A /* MainTabBarController.swift in Sources */,
+				442023A32726A55300C1349A /* PersonalSubmitWorkViewController.swift in Sources */,
 				44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */,
 				4420238E27268E5E00C1349A /* PersonalMyPageViewController.swift in Sources */,
 				4420239627268F5D00C1349A /* SettingViewController.swift in Sources */,
