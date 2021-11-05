@@ -12,6 +12,10 @@ class PersonalSubmitWorkViewController: UIViewController {
     @IBOutlet weak var addTagButton: UIButton!
     @IBOutlet weak var addThumbnailsWorkButton: UIButton!
     @IBOutlet weak var workDescriptionTextView: UITextView!
+    @IBOutlet weak var wordTitleTextField: UITextField!
+    @IBOutlet weak var githubLinkTextField: UITextField!
+    @IBOutlet weak var youtubeLinkTextField: UITextField!
+    @IBOutlet weak var workTagsCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +38,14 @@ class PersonalSubmitWorkViewController: UIViewController {
     }
 
     @IBAction func addThumbnailsWork(_ sender: Any) {
+        print(#function)
+    }
+
+    @IBAction func submitWork(_ sender: Any) {
+        print(#function)
+    }
+
+    @IBAction func draftWork(_ sender: Any) {
         print(#function)
     }
 }
