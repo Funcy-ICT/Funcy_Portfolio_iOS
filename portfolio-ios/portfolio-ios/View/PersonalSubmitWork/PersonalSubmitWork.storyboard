@@ -262,6 +262,7 @@
                     <connections>
                         <outlet property="addTagButton" destination="jMR-I3-kZc" id="FiD-yW-hwj"/>
                         <outlet property="addThumbnailsWorkButton" destination="2of-ac-BGG" id="f2O-ai-Zb8"/>
+                        <outlet property="workDescriptionTextView" destination="74A-Un-EHJ" id="nF3-y2-fdv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
