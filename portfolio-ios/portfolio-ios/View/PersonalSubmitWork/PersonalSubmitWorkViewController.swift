@@ -31,6 +31,29 @@ class PersonalSubmitWorkViewController: UIViewController {
         workDescriptionTextView.layer.borderWidth = 0.2
         workDescriptionTextView.layer.cornerRadius = 5.0
         workDescriptionTextView.layer.masksToBounds = true
+
+        workDescriptionTextView.delegate = self
+        wordTitleTextField.delegate = self
+        githubLinkTextField.delegate = self
+        youtubeLinkTextField.delegate = self
+
+        // キーボードに完了のツールバーを作成
+        let doneToolbar = UIToolbar()
+        doneToolbar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40)
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let doneButton = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(doneButtonTaped))
+        doneToolbar.items = [spacer, doneButton]
+        workDescriptionTextView.inputAccessoryView = doneToolbar
+        wordTitleTextField.inputAccessoryView = doneToolbar
+        githubLinkTextField.inputAccessoryView = doneToolbar
+        youtubeLinkTextField.inputAccessoryView = doneToolbar
+    }
+
+    @objc func doneButtonTaped(sender: UIButton) {
+        workDescriptionTextView.endEditing(true)
+        wordTitleTextField.resignFirstResponder()
+        githubLinkTextField.resignFirstResponder()
+        youtubeLinkTextField.resignFirstResponder()
     }
 
     @IBAction func addTag(_ sender: Any) {
@@ -48,4 +71,14 @@ class PersonalSubmitWorkViewController: UIViewController {
     @IBAction func draftWork(_ sender: Any) {
         print(#function)
     }
+}
+
+extension PersonalSubmitWorkViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension PersonalSubmitWorkViewController: UITextViewDelegate {
 }
