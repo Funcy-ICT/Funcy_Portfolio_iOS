@@ -20,6 +20,8 @@ class PersonalSubmitWorkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     private func configurationUI() {
@@ -54,6 +56,29 @@ class PersonalSubmitWorkViewController: UIViewController {
         wordTitleTextField.resignFirstResponder()
         githubLinkTextField.resignFirstResponder()
         youtubeLinkTextField.resignFirstResponder()
+    }
+
+    // キーボード出現時にViewを上にあげる
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if wordTitleTextField.isFirstResponder || workDescriptionTextView.isFirstResponder {
+            return
+        }
+
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                view.frame.origin.y -= keyboardSize.height
+            } else {
+                let suggestionHeight = self.view.frame.origin.y + keyboardSize.height
+                view.frame.origin.y -= suggestionHeight
+            }
+        }
+    }
+
+    // キーボードが閉じられた時にViewの高さを元に戻す
+    @objc func keyboardWillHide() {
+        if view.frame.origin.y != 0 {
+            view.frame.origin.y = 0
+        }
     }
 
     @IBAction func addTag(_ sender: Any) {
