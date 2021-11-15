@@ -6,7 +6,6 @@ target 'portfolio-ios' do
   use_frameworks!
   pod 'SwiftLint', '~> 0.44.0'
   pod 'Alamofire', '~> 5.4'
-  pod 'ImagePicker'
 
   # Pods for portfolio-ios
 
