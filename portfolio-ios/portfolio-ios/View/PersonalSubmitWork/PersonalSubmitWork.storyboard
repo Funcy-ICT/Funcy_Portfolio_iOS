@@ -128,6 +128,22 @@
                                                             <action selector="addThumbnailsWork:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="r6i-9r-y5n"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qn-o3-f8D">
+                                                        <rect key="frame" x="72" y="12" width="64" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wqw-q1-TlC">
+                                                        <rect key="frame" x="144" y="12" width="64" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yS3-xo-fkH">
+                                                        <rect key="frame" x="216" y="12" width="64" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Czh-TB-FFR">
+                                                        <rect key="frame" x="288" y="12" width="64" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.94509803921568625" green="0.92549019607843142" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -269,6 +285,7 @@
                     <connections>
                         <outlet property="addTagButton" destination="jMR-I3-kZc" id="FiD-yW-hwj"/>
                         <outlet property="addThumbnailsWorkButton" destination="2of-ac-BGG" id="f2O-ai-Zb8"/>
+                        <outlet property="firstCapturedImageView" destination="1qn-o3-f8D" id="X6A-Cz-9lh"/>
                         <outlet property="githubLinkTextField" destination="68A-vX-Yow" id="KJk-hS-WAB"/>
                         <outlet property="wordTitleTextField" destination="I8s-qK-7as" id="Wfb-a0-RTo"/>
                         <outlet property="workDescriptionTextView" destination="74A-Un-EHJ" id="nF3-y2-fdv"/>
