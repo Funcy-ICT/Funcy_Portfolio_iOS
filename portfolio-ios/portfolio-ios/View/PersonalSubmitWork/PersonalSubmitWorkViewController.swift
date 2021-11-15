@@ -8,7 +8,7 @@
 import PhotosUI
 import UIKit
 
-class PersonalSubmitWorkViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PersonalSubmitWorkViewController: UIViewController {
 
     @IBOutlet weak var addTagButton: UIButton!
     @IBOutlet weak var addThumbnailsWorkButton: UIButton!
@@ -17,6 +17,9 @@ class PersonalSubmitWorkViewController: UIViewController, UIImagePickerControlle
     @IBOutlet weak var githubLinkTextField: UITextField!
     @IBOutlet weak var youtubeLinkTextField: UITextField!
     @IBOutlet weak var workTagsCollectionView: UICollectionView!
+    @IBOutlet weak var firstCapturedImageView: UIImageView!
+
+    private var capturedImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,16 +91,12 @@ class PersonalSubmitWorkViewController: UIViewController, UIImagePickerControlle
 
     @IBAction func addThumbnailsWork(_ sender: Any) {
         print(#function)
-        
+
         let alertController = UIAlertController(title: "確認", message: "選択してください", preferredStyle: .actionSheet)
 
         // カメラが利用可能かどうかチェック
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            // カメラを起動するための選択肢を定義
-            // UIAlertActionは選択肢を表示させるクラス
             let cameraAction = UIAlertAction(title: "カメラ", style: .default, handler: { (_: UIAlertAction) in
-
-                // カメラを起動
                 let imagePickerController = UIImagePickerController()
                 imagePickerController.sourceType = .camera
                 imagePickerController.delegate = self
@@ -108,10 +107,7 @@ class PersonalSubmitWorkViewController: UIViewController, UIImagePickerControlle
 
         // フォトライブラリが利用可能かどうかチェック
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            // フォトライブラリを起動するための選択肢を定義
             let photoLibraryAction = UIAlertAction(title: "フォトライブラリ", style: .default, handler: { (_: UIAlertAction) in
-
-                // フォトライブラリを起動
                 let imagePickerController = UIImagePickerController()
                 imagePickerController.sourceType = .photoLibrary
                 imagePickerController.delegate = self
@@ -124,10 +120,7 @@ class PersonalSubmitWorkViewController: UIViewController, UIImagePickerControlle
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
 
-        // ipadで落ちてしまう対策
-        alertController.popoverPresentationController?.sourceView = view
-
-        // 選択肢を画面に表示
+        alertController.popoverPresentationController?.sourceView = view // ipadで落ちてしまう対策
         present(alertController, animated: true, completion: nil)
     }
 
@@ -148,4 +141,13 @@ extension PersonalSubmitWorkViewController: UITextFieldDelegate {
 }
 
 extension PersonalSubmitWorkViewController: UITextViewDelegate {
+}
+
+extension PersonalSubmitWorkViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            firstCapturedImageView.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
