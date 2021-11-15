@@ -17,7 +17,6 @@ class PersonalSubmitWorkViewController: UIViewController {
     @IBOutlet weak var githubLinkTextField: UITextField!
     @IBOutlet weak var youtubeLinkTextField: UITextField!
     @IBOutlet weak var workTagsCollectionView: UICollectionView!
-    @IBOutlet weak var firstCapturedImageView: UIImageView!
 
     private var capturedImage: UIImage?
 
@@ -85,6 +84,15 @@ class PersonalSubmitWorkViewController: UIViewController {
         }
     }
 
+    // 作品公開非公開設定
+    @IBAction func publicPrivateSettings(_ sender: Any) {
+        if (sender as AnyObject).isOn {
+            print("公開")
+        } else {
+            print("非公開")
+        }
+    }
+
     @IBAction func addTag(_ sender: Any) {
         print(#function)
     }
@@ -146,7 +154,6 @@ extension PersonalSubmitWorkViewController: UITextViewDelegate {
 extension PersonalSubmitWorkViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            firstCapturedImageView.image = pickedImage
         }
         dismiss(animated: true, completion: nil)
     }
