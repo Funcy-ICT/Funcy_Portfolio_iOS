@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.4)
+  - ImagePicker (3.2.0)
   - SwiftLint (0.44.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - ImagePicker
   - SwiftLint (~> 0.44.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ImagePicker
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: 4c238fb47b46ba5fa27bcf0f9f9f3fa3550288d9
+PODFILE CHECKSUM: a541e74dbc8042c21c42a3059caa419afa716022
 
 COCOAPODS: 1.10.2
