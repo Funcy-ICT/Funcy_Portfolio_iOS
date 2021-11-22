@@ -306,9 +306,10 @@
                         <outlet property="addTagButton" destination="jMR-I3-kZc" id="FiD-yW-hwj"/>
                         <outlet property="addThumbnailsWorkButton" destination="2of-ac-BGG" id="f2O-ai-Zb8"/>
                         <outlet property="githubLinkTextField" destination="68A-vX-Yow" id="KJk-hS-WAB"/>
-                        <outlet property="wordTitleTextField" destination="I8s-qK-7as" id="Wfb-a0-RTo"/>
                         <outlet property="workDescriptionTextView" destination="74A-Un-EHJ" id="nF3-y2-fdv"/>
                         <outlet property="workTagsCollectionView" destination="Jdg-VR-6Le" id="fMy-oq-m1O"/>
+                        <outlet property="workThumbnailCollectionView" destination="r3S-Rw-HXL" id="rKT-fq-het"/>
+                        <outlet property="workTitleTextField" destination="I8s-qK-7as" id="ubZ-eK-ZJ9"/>
                         <outlet property="youtubeLinkTextField" destination="YWB-ZO-KZc" id="eG6-Oz-BKT"/>
                     </connections>
                 </viewController>

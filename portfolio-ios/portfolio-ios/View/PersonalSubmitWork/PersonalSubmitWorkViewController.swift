@@ -13,10 +13,11 @@ class PersonalSubmitWorkViewController: UIViewController {
     @IBOutlet weak var addTagButton: UIButton!
     @IBOutlet weak var addThumbnailsWorkButton: UIButton!
     @IBOutlet weak var workDescriptionTextView: UITextView!
-    @IBOutlet weak var wordTitleTextField: UITextField!
+    @IBOutlet weak var workTitleTextField: UITextField!
     @IBOutlet weak var githubLinkTextField: UITextField!
     @IBOutlet weak var youtubeLinkTextField: UITextField!
     @IBOutlet weak var workTagsCollectionView: UICollectionView!
+    @IBOutlet weak var workThumbnailCollectionView: UICollectionView!
 
     private var capturedImage: UIImage?
 
@@ -38,7 +39,7 @@ class PersonalSubmitWorkViewController: UIViewController {
         workDescriptionTextView.layer.masksToBounds = true
 
         workDescriptionTextView.delegate = self
-        wordTitleTextField.delegate = self
+        workTitleTextField.delegate = self
         githubLinkTextField.delegate = self
         youtubeLinkTextField.delegate = self
 
@@ -49,21 +50,21 @@ class PersonalSubmitWorkViewController: UIViewController {
         let doneButton = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(doneButtonTaped))
         doneToolbar.items = [spacer, doneButton]
         workDescriptionTextView.inputAccessoryView = doneToolbar
-        wordTitleTextField.inputAccessoryView = doneToolbar
+        workTitleTextField.inputAccessoryView = doneToolbar
         githubLinkTextField.inputAccessoryView = doneToolbar
         youtubeLinkTextField.inputAccessoryView = doneToolbar
     }
 
     @objc func doneButtonTaped(sender: UIButton) {
         workDescriptionTextView.endEditing(true)
-        wordTitleTextField.resignFirstResponder()
+        workTitleTextField.resignFirstResponder()
         githubLinkTextField.resignFirstResponder()
         youtubeLinkTextField.resignFirstResponder()
     }
 
     // キーボード出現時にViewを上にあげる
     @objc func keyboardWillShow(notification: NSNotification) {
-        if wordTitleTextField.isFirstResponder || workDescriptionTextView.isFirstResponder {
+        if workTitleTextField.isFirstResponder || workDescriptionTextView.isFirstResponder {
             return
         }
 
