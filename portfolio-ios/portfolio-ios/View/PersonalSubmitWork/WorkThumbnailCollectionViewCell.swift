@@ -10,13 +10,16 @@ import UIKit
 class WorkThumbnailCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var workThumbnailImageView: UIImageView!
+    @IBOutlet weak var deleteWorkThumbnailButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        deleteWorkThumbnailButton.tintColor = .gray
     }
 
     @IBAction func deleteWorkThumbnail(_ sender: Any) {
+
     }
 
 }
