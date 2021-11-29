@@ -19,7 +19,7 @@ class PersonalSubmitWorkViewController: UIViewController {
     @IBOutlet weak var workTagsCollectionView: UICollectionView!
     @IBOutlet weak var workThumbnailCollectionView: UICollectionView!
 
-    private var capturedImage: UIImage?
+    private var pickedImages = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,9 @@ class PersonalSubmitWorkViewController: UIViewController {
         workTitleTextField.delegate = self
         githubLinkTextField.delegate = self
         youtubeLinkTextField.delegate = self
+        workThumbnailCollectionView.delegate = self
+        workThumbnailCollectionView.dataSource = self
+        workThumbnailCollectionView.register(UINib(nibName: "WorkThumbnailCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "photoCell")
 
         // キーボードに完了のツールバーを作成
         let doneToolbar = UIToolbar()
@@ -154,8 +157,30 @@ extension PersonalSubmitWorkViewController: UITextViewDelegate {
 
 extension PersonalSubmitWorkViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
         }
-        dismiss(animated: true, completion: nil)
+        pickedImages.append(pickedImage)
+        dismiss(animated: true, completion: {
+            self.workThumbnailCollectionView.reloadData()
+        })
     }
+}
+
+extension PersonalSubmitWorkViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(pickedImages.count)
+        return pickedImages.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? WorkThumbnailCollectionViewCell else { return UICollectionViewCell() }
+        //        if pickedImages[indexPath.row] == nil {
+        //            return UICollectionViewCell()
+        //        }
+        let image = pickedImages[indexPath.row]
+        cell.workThumbnailImageView.image = image
+        return cell
+    }
+
 }
