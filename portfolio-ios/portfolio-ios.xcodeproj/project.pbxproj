@@ -19,6 +19,10 @@
 		44202398272691C100C1349A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44202397272691C000C1349A /* MainTabBarController.swift */; };
 		442023A12726A51E00C1349A /* PersonalSubmitWork.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442023A02726A51E00C1349A /* PersonalSubmitWork.storyboard */; };
 		442023A32726A55300C1349A /* PersonalSubmitWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */; };
+		4428C8512754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428C84F2754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift */; };
+		4428C8522754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */; };
+		4428C8552754C734004E8325 /* PersonalSubmitWorkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428C8542754C734004E8325 /* PersonalSubmitWorkResponse.swift */; };
+		4428C8572754CAAC004E8325 /* PersonalSubmitWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428C8562754CAAC004E8325 /* PersonalSubmitWorkModel.swift */; };
 		449AAE8F27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AAE8D27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift */; };
 		449AAE9027424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449AAE8E27424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib */; };
 		44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3E5A627141D9800CDFB26 /* AppDelegate.swift */; };
@@ -64,6 +68,10 @@
 		44202397272691C000C1349A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		442023A02726A51E00C1349A /* PersonalSubmitWork.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalSubmitWork.storyboard; sourceTree = "<group>"; };
 		442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSubmitWorkViewController.swift; sourceTree = "<group>"; };
+		4428C84F2754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
+		4428C8542754C734004E8325 /* PersonalSubmitWorkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSubmitWorkResponse.swift; sourceTree = "<group>"; };
+		4428C8562754CAAC004E8325 /* PersonalSubmitWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSubmitWorkModel.swift; sourceTree = "<group>"; };
 		449AAE8D27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSubmitCollectionViewCell.swift; sourceTree = "<group>"; };
 		449AAE8E27424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSubmitCollectionViewCell.xib; sourceTree = "<group>"; };
 		44D3E5A327141D9800CDFB26 /* portfolio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,8 +188,19 @@
 				442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */,
 				449AAE8D27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift */,
 				449AAE8E27424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib */,
+				4428C84F2754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift */,
+				4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */,
 			);
 			path = PersonalSubmitWork;
+			sourceTree = "<group>";
+		};
+		4428C8532754C710004E8325 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4428C8542754C734004E8325 /* PersonalSubmitWorkResponse.swift */,
+				4428C8562754CAAC004E8325 /* PersonalSubmitWorkModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		44D3E59A27141D9800CDFB26 = {
@@ -213,6 +232,7 @@
 				44D3E5A827141D9800CDFB26 /* SceneDelegate.swift */,
 				44202397272691C000C1349A /* MainTabBarController.swift */,
 				442023852726858E00C1349A /* MainTabBar.storyboard */,
+				4428C8532754C710004E8325 /* Model */,
 				4420239927269AE700C1349A /* View */,
 				44D3E5AF27141D9900CDFB26 /* Assets.xcassets */,
 				44D3E5B127141D9900CDFB26 /* LaunchScreen.storyboard */,
@@ -365,6 +385,7 @@
 				44D3E5B327141D9900CDFB26 /* LaunchScreen.storyboard in Resources */,
 				442023862726858E00C1349A /* MainTabBar.storyboard in Resources */,
 				449AAE9027424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib in Resources */,
+				4428C8522754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib in Resources */,
 				44D3E5B027141D9900CDFB26 /* Assets.xcassets in Resources */,
 				442023882726877D00C1349A /* TopView.storyboard in Resources */,
 				4420238C27268E4100C1349A /* PersonalMyPage.storyboard in Resources */,
@@ -519,8 +540,11 @@
 				4420239227268F0200C1349A /* GroupMyPageViewController.swift in Sources */,
 				44202398272691C100C1349A /* MainTabBarController.swift in Sources */,
 				442023A32726A55300C1349A /* PersonalSubmitWorkViewController.swift in Sources */,
+				4428C8512754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift in Sources */,
+				4428C8552754C734004E8325 /* PersonalSubmitWorkResponse.swift in Sources */,
 				449AAE8F27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift in Sources */,
 				44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */,
+				4428C8572754CAAC004E8325 /* PersonalSubmitWorkModel.swift in Sources */,
 				4420238E27268E5E00C1349A /* PersonalMyPageViewController.swift in Sources */,
 				4420239627268F5D00C1349A /* SettingViewController.swift in Sources */,
 				44D3E5A927141D9800CDFB26 /* SceneDelegate.swift in Sources */,
