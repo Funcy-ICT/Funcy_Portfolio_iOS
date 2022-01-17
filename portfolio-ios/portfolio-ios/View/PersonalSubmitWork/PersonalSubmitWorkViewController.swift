@@ -175,11 +175,8 @@ extension PersonalSubmitWorkViewController: UICollectionViewDelegate, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? WorkThumbnailCollectionViewCell else { return UICollectionViewCell() }
-        //        if pickedImages[indexPath.row] == nil {
-        //            return UICollectionViewCell()
-        //        }
         let image = pickedImages[indexPath.row]
-        cell.workThumbnailImageView.image = image
+        cell.workThumbnailImageView.image = image.resize(size: .init(width: 80, height: 70))
         return cell
     }
 
