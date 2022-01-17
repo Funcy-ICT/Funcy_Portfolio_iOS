@@ -35,6 +35,7 @@
 		6707DA37C23EA18B93433882 /* Pods_portfolio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E3027620D0D457685F28D0 /* Pods_portfolio_iosTests.framework */; };
 		CA19F6027CCFB8649616BA49 /* Pods_portfolio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285583CCF64A8B0CF6E97A77 /* Pods_portfolio_ios.framework */; };
 		D62064AABF71CB31ED9F58CF /* Pods_portfolio_ios_portfolio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7EAACDF79B5999FD43B8DD /* Pods_portfolio_ios_portfolio_iosUITests.framework */; };
+		E741B6DE2795597D00C95F39 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741B6DD2795597D00C95F39 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		CD8635C1959D6AF8981E3A36 /* Pods-portfolio-ios-portfolio-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolio-ios-portfolio-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-portfolio-ios-portfolio-iosUITests/Pods-portfolio-ios-portfolio-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D61ACD1E163CE03FEF2EEC48 /* Pods-portfolio-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolio-iosTests.release.xcconfig"; path = "Target Support Files/Pods-portfolio-iosTests/Pods-portfolio-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E45786372966D9171BBAB239 /* Pods-portfolio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolio-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-portfolio-iosTests/Pods-portfolio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E741B6DD2795597D00C95F39 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FF7EAACDF79B5999FD43B8DD /* Pods_portfolio_ios_portfolio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portfolio_ios_portfolio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 				44D3E5A827141D9800CDFB26 /* SceneDelegate.swift */,
 				44202397272691C000C1349A /* MainTabBarController.swift */,
 				442023852726858E00C1349A /* MainTabBar.storyboard */,
+				E741B6DC2795595600C95F39 /* Extension */,
 				4428C8532754C710004E8325 /* Model */,
 				4420239927269AE700C1349A /* View */,
 				44D3E5AF27141D9900CDFB26 /* Assets.xcassets */,
@@ -269,6 +272,14 @@
 				D61ACD1E163CE03FEF2EEC48 /* Pods-portfolio-iosTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E741B6DC2795595600C95F39 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E741B6DD2795597D00C95F39 /* UIImage+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E741B6DE2795597D00C95F39 /* UIImage+Extension.swift in Sources */,
 				4420238A272687E600C1349A /* TopViewController.swift in Sources */,
 				4420239227268F0200C1349A /* GroupMyPageViewController.swift in Sources */,
 				44202398272691C100C1349A /* MainTabBarController.swift in Sources */,
@@ -722,6 +734,9 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "portfolio-ios/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラにアクセスします";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "フォトライブラリに保存します";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "フォトライブラリにアクセスします";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTabBar;
@@ -751,6 +766,9 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "portfolio-ios/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラにアクセスします";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "フォトライブラリに保存します";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "フォトライブラリにアクセスします";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTabBar;
