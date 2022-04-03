@@ -23,8 +23,6 @@
 		4428C8522754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */; };
 		4428C8552754C734004E8325 /* PersonalSubmitWorkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428C8542754C734004E8325 /* PersonalSubmitWorkResponse.swift */; };
 		4428C8572754CAAC004E8325 /* PersonalSubmitWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428C8562754CAAC004E8325 /* PersonalSubmitWorkModel.swift */; };
-		449AAE8F27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AAE8D27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift */; };
-		449AAE9027424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449AAE8E27424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib */; };
 		44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3E5A627141D9800CDFB26 /* AppDelegate.swift */; };
 		44D3E5A927141D9800CDFB26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3E5A827141D9800CDFB26 /* SceneDelegate.swift */; };
 		44D3E5B027141D9900CDFB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D3E5AF27141D9900CDFB26 /* Assets.xcassets */; };
@@ -73,8 +71,6 @@
 		4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
 		4428C8542754C734004E8325 /* PersonalSubmitWorkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSubmitWorkResponse.swift; sourceTree = "<group>"; };
 		4428C8562754CAAC004E8325 /* PersonalSubmitWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSubmitWorkModel.swift; sourceTree = "<group>"; };
-		449AAE8D27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSubmitCollectionViewCell.swift; sourceTree = "<group>"; };
-		449AAE8E27424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSubmitCollectionViewCell.xib; sourceTree = "<group>"; };
 		44D3E5A327141D9800CDFB26 /* portfolio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D3E5A627141D9800CDFB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D3E5A827141D9800CDFB26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,8 +184,6 @@
 			children = (
 				442023A02726A51E00C1349A /* PersonalSubmitWork.storyboard */,
 				442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */,
-				449AAE8D27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift */,
-				449AAE8E27424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib */,
 				4428C84F2754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift */,
 				4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */,
 			);
@@ -395,7 +389,6 @@
 				4420239027268EE000C1349A /* GroupMyPage.storyboard in Resources */,
 				44D3E5B327141D9900CDFB26 /* LaunchScreen.storyboard in Resources */,
 				442023862726858E00C1349A /* MainTabBar.storyboard in Resources */,
-				449AAE9027424C7900C04E12 /* PhotoSubmitCollectionViewCell.xib in Resources */,
 				4428C8522754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib in Resources */,
 				44D3E5B027141D9900CDFB26 /* Assets.xcassets in Resources */,
 				442023882726877D00C1349A /* TopView.storyboard in Resources */,
@@ -554,7 +547,6 @@
 				442023A32726A55300C1349A /* PersonalSubmitWorkViewController.swift in Sources */,
 				4428C8512754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift in Sources */,
 				4428C8552754C734004E8325 /* PersonalSubmitWorkResponse.swift in Sources */,
-				449AAE8F27424C7900C04E12 /* PhotoSubmitCollectionViewCell.swift in Sources */,
 				44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */,
 				4428C8572754CAAC004E8325 /* PersonalSubmitWorkModel.swift in Sources */,
 				4420238E27268E5E00C1349A /* PersonalMyPageViewController.swift in Sources */,
