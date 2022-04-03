@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol WorkThumbnailDeletable: AnyObject {
+    func deleteWorkThumbnail(index: Int)
+}
+
 class WorkThumbnailCollectionViewCell: UICollectionViewCell {
 
+    weak var workThumbnailDeletable: WorkThumbnailDeletable?
+    
     @IBOutlet weak var workThumbnailImageView: UIImageView!
     @IBOutlet weak var deleteWorkThumbnailButton: UIButton!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -19,7 +25,6 @@ class WorkThumbnailCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func deleteWorkThumbnail(_ sender: Any) {
-
+        workThumbnailDeletable?.deleteWorkThumbnail(index: self.tag)
     }
-
 }
