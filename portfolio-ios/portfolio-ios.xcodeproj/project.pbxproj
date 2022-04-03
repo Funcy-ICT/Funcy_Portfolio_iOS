@@ -34,6 +34,9 @@
 		CA19F6027CCFB8649616BA49 /* Pods_portfolio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285583CCF64A8B0CF6E97A77 /* Pods_portfolio_ios.framework */; };
 		D62064AABF71CB31ED9F58CF /* Pods_portfolio_ios_portfolio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7EAACDF79B5999FD43B8DD /* Pods_portfolio_ios_portfolio_iosUITests.framework */; };
 		E741B6DE2795597D00C95F39 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741B6DD2795597D00C95F39 /* UIImage+Extension.swift */; };
+		E75E7C0927F99B62005382A7 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E7C0727F99B62005382A7 /* TagsTableViewCell.swift */; };
+		E75E7C0A27F99B62005382A7 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75E7C0827F99B62005382A7 /* TagsTableViewCell.xib */; };
+		E75E7C0C27F99C3D005382A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E7C0B27F99C3D005382A7 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		D61ACD1E163CE03FEF2EEC48 /* Pods-portfolio-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolio-iosTests.release.xcconfig"; path = "Target Support Files/Pods-portfolio-iosTests/Pods-portfolio-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E45786372966D9171BBAB239 /* Pods-portfolio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolio-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-portfolio-iosTests/Pods-portfolio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E741B6DD2795597D00C95F39 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		E75E7C0727F99B62005382A7 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
+		E75E7C0827F99B62005382A7 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
+		E75E7C0B27F99C3D005382A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FF7EAACDF79B5999FD43B8DD /* Pods_portfolio_ios_portfolio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portfolio_ios_portfolio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,6 +192,8 @@
 				442023A22726A55300C1349A /* PersonalSubmitWorkViewController.swift */,
 				4428C84F2754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift */,
 				4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */,
+				E75E7C0727F99B62005382A7 /* TagsTableViewCell.swift */,
+				E75E7C0827F99B62005382A7 /* TagsTableViewCell.xib */,
 			);
 			path = PersonalSubmitWork;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				E741B6DD2795597D00C95F39 /* UIImage+Extension.swift */,
+				E75E7C0B27F99C3D005382A7 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -390,6 +399,7 @@
 				44D3E5B327141D9900CDFB26 /* LaunchScreen.storyboard in Resources */,
 				442023862726858E00C1349A /* MainTabBar.storyboard in Resources */,
 				4428C8522754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib in Resources */,
+				E75E7C0A27F99B62005382A7 /* TagsTableViewCell.xib in Resources */,
 				44D3E5B027141D9900CDFB26 /* Assets.xcassets in Resources */,
 				442023882726877D00C1349A /* TopView.storyboard in Resources */,
 				4420238C27268E4100C1349A /* PersonalMyPage.storyboard in Resources */,
@@ -548,10 +558,12 @@
 				4428C8512754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift in Sources */,
 				4428C8552754C734004E8325 /* PersonalSubmitWorkResponse.swift in Sources */,
 				44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */,
+				E75E7C0C27F99C3D005382A7 /* UIView+Extension.swift in Sources */,
 				4428C8572754CAAC004E8325 /* PersonalSubmitWorkModel.swift in Sources */,
 				4420238E27268E5E00C1349A /* PersonalMyPageViewController.swift in Sources */,
 				4420239627268F5D00C1349A /* SettingViewController.swift in Sources */,
 				44D3E5A927141D9800CDFB26 /* SceneDelegate.swift in Sources */,
+				E75E7C0927F99B62005382A7 /* TagsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
