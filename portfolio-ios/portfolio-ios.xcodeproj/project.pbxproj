@@ -38,6 +38,8 @@
 		E75E7C0A27F99B62005382A7 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75E7C0827F99B62005382A7 /* TagsTableViewCell.xib */; };
 		E75E7C0C27F99C3D005382A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E7C0B27F99C3D005382A7 /* UIView+Extension.swift */; };
 		E75E7C0E27F9A047005382A7 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E7C0D27F9A047005382A7 /* TagsViewController.swift */; };
+		E75E7C1127F9AA10005382A7 /* WorkTagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E7C0F27F9AA10005382A7 /* WorkTagsCollectionViewCell.swift */; };
+		E75E7C1227F9AA10005382A7 /* WorkTagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75E7C1027F9AA10005382A7 /* WorkTagsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		E75E7C0827F99B62005382A7 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
 		E75E7C0B27F99C3D005382A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E75E7C0D27F9A047005382A7 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		E75E7C0F27F9AA10005382A7 /* WorkTagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		E75E7C1027F9AA10005382A7 /* WorkTagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkTagsCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF7EAACDF79B5999FD43B8DD /* Pods_portfolio_ios_portfolio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portfolio_ios_portfolio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,6 +201,8 @@
 				4428C8502754A3DA004E8325 /* WorkThumbnailCollectionViewCell.xib */,
 				E75E7C0727F99B62005382A7 /* TagsTableViewCell.swift */,
 				E75E7C0827F99B62005382A7 /* TagsTableViewCell.xib */,
+				E75E7C0F27F9AA10005382A7 /* WorkTagsCollectionViewCell.swift */,
+				E75E7C1027F9AA10005382A7 /* WorkTagsCollectionViewCell.xib */,
 			);
 			path = PersonalSubmitWork;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				442023882726877D00C1349A /* TopView.storyboard in Resources */,
 				4420238C27268E4100C1349A /* PersonalMyPage.storyboard in Resources */,
 				4420239427268F4200C1349A /* Setting.storyboard in Resources */,
+				E75E7C1227F9AA10005382A7 /* WorkTagsCollectionViewCell.xib in Resources */,
 				442023A12726A51E00C1349A /* PersonalSubmitWork.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +568,7 @@
 				442023A32726A55300C1349A /* PersonalSubmitWorkViewController.swift in Sources */,
 				4428C8512754A3DA004E8325 /* WorkThumbnailCollectionViewCell.swift in Sources */,
 				4428C8552754C734004E8325 /* PersonalSubmitWorkResponse.swift in Sources */,
+				E75E7C1127F9AA10005382A7 /* WorkTagsCollectionViewCell.swift in Sources */,
 				44D3E5A727141D9800CDFB26 /* AppDelegate.swift in Sources */,
 				E75E7C0C27F99C3D005382A7 /* UIView+Extension.swift in Sources */,
 				4428C8572754CAAC004E8325 /* PersonalSubmitWorkModel.swift in Sources */,
