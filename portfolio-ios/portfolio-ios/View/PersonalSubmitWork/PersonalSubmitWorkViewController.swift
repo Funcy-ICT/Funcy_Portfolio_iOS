@@ -20,6 +20,7 @@ class PersonalSubmitWorkViewController: UIViewController {
     @IBOutlet weak var workThumbnailCollectionView: UICollectionView!
 
     private var pickedImages = [UIImage]()
+    private var workThumbnailDelegate: WorkThumbnailDeletable!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -177,7 +178,18 @@ extension PersonalSubmitWorkViewController: UICollectionViewDelegate, UICollecti
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? WorkThumbnailCollectionViewCell else { return UICollectionViewCell() }
         let image = pickedImages[indexPath.row]
         cell.workThumbnailImageView.image = image.resize(size: .init(width: 80, height: 70))
+        cell.deleteWorkThumbnailButton.tag = indexPath.row
+        cell.workThumbnailDeletable = self
         return cell
     }
 
+}
+
+extension PersonalSubmitWorkViewController: WorkThumbnailDeletable {
+    func deleteWorkThumbnail(index: Int) {
+        pickedImages.remove(at: index)
+        DispatchQueue.main.async {
+            self.workThumbnailCollectionView.reloadData()
+        }
+    }
 }
