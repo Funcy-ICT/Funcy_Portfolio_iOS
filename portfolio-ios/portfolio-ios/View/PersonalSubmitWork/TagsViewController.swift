@@ -10,6 +10,7 @@ import UIKit
 class TagsViewController: UIViewController {
 
     @IBOutlet weak var tagsTableView: UITableView!
+    var tags: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,6 @@ extension TagsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "tagsCell", for: indexPath) as? TagsTableViewCell else { return UITableViewCell() }
-        cell.tagLabel.text = "hogehoge"
         return cell
     }
     
@@ -50,5 +50,14 @@ extension TagsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return .leastNonzeroMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tagsCell", for: indexPath) as? TagsTableViewCell
+        guard let tagText = cell?.tagLabel.text else { return }
+        let personalSubmitWorkViewController = storyboard?.instantiateViewController(withIdentifier: "PersonalSubmitWork") as! PersonalSubmitWorkViewController
+        tags.append(tagText)
+        personalSubmitWorkViewController.tags = self.tags
+        dismiss(animated: true)
     }
 }
