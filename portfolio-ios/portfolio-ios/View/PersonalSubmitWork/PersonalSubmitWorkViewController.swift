@@ -21,12 +21,22 @@ class PersonalSubmitWorkViewController: UIViewController {
 
     private var pickedImages = [UIImage]()
     private var workThumbnailDelegate: WorkThumbnailDeletable!
+    var tags: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationUI()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if #available(iOS 13.0, *) {
+            presentingViewController?.beginAppearanceTransition(false, animated: animated)
+        }
+        super.viewWillAppear(animated)
+        print(tags)
+        print(#function)
     }
 
     private func configurationUI() {
@@ -99,7 +109,6 @@ class PersonalSubmitWorkViewController: UIViewController {
     }
 
     @IBAction func addTag(_ sender: Any) {
-        print(#function)
     }
 
     @IBAction func addThumbnailsWork(_ sender: Any) {
